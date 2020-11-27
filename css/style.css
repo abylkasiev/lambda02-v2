@@ -949,6 +949,25 @@ html, body {
 
 .food {
   max-width: 100%;
+  cursor: pointer;
+}
+
+.modal-content {
+  display: flex;
+  width: 900px;
+  background-color: #ffffffe0;
+}
+@media screen and (max-width: 1024px) {
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 300px;
+  }
 }
 
 .modal-content {
@@ -963,7 +982,7 @@ html, body {
 }
 
 .animation-modal.mfp-ready {
-  opacity: 1;
+  opacity: 0.8;
   transition: 0.5s;
 }
 
@@ -971,6 +990,28 @@ html, body {
   font-family: "lato";
   font-size: 1rem;
   line-height: 24px;
+  margin: 0;
+}
+
+.food-modal {
+  max-width: 200%;
+  min-height: 100%;
+  margin-right: 5rem;
+}
+@media screen and (max-width: 1024px) {
+  .food-modal {
+    max-width: 100%;
+  }
+}
+
+.modal-info {
+  padding: 2rem 2rem 2rem 13rem;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .modal-info {
+    padding: 2rem 1rem;
+  }
 }
 
 .menu-section {

@@ -44,7 +44,18 @@
     justify-content: space-around
 .food
     max-width: 100%
+    cursor: pointer
 
+.modal-content
+    display: flex
+    width: 900px
+    background-color: #ffffffe0
+    @media screen and ( max-width: 1024px )
+        display: flex
+        flex-direction: column
+        width: 500px
+    @media screen and ( max-width: 600px )
+        width: 300px
 .modal-content
     position: fixed
     left: 50%
@@ -53,10 +64,22 @@
 .animation-modal
     opacity: 0
 .animation-modal.mfp-ready
-    opacity: 1
+    opacity: .8
     transition: .5s
 
 .modal-text
     font-family: 'lato'
     font-size: 1rem
     line-height: 24px
+    margin: 0
+.food-modal
+    max-width: 200%
+    min-height: 100%
+    margin-right: 5rem
+    @media screen and ( max-width: 1024px )    
+        max-width: 100%
+.modal-info
+    padding: 2rem 2rem 2rem 13rem
+    text-align: center
+    @media screen and ( max-width: 1024px )    
+        padding: 2rem 1rem
