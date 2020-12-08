@@ -10,24 +10,24 @@
 <body>
     
     <div class="wrapper">
-        <header class="header">
+        <header class="header" id="home">
             <div class="container">
                 <div class="top">
                     <div class="logo">
                         <img src="img/Logo.png" alt="logo" class="logo__img">
                     </div>
-                    <nav class="nav">
+                    <nav class="nav" id="nav">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Ingredients</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Menu</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Reviews</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Reservations</a></li>
+                            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                            <li class="nav__item"><a href="#ingredients" class="nav__link">Ingredients</a></li>
+                            <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+                            <li class="nav__item"><a href="#reviews" class="nav__link">Reviews</a></li>
+                            <li class="nav__item"><a href="#reservation" class="nav__link">Reservations</a></li>
                             <nav class="social">
-                                <a href="#" class="social__link"><i class="fab fa-twitter social-icons"></i></a>
-                                <a href="#" class="social__link"><i class="fab fa-youtube social-icons"></i></a>
-                                <a href="#" class="social__link"><i class="fab fa-facebook-f social-icons"></i></a>
+                                <a href="https://twitter.com/?lang=ru" class="social__link"><i class="fab fa-twitter social-icons"></i></a>
+                                <a href="https://www.youtube.com/?hl=ru" class="social__link"><i class="fab fa-youtube social-icons"></i></a>
+                                <a href="https://www.facebook.com/" class="social__link"><i class="fab fa-facebook-f social-icons"></i></a>
                             </nav>
                         </ul>
                     </nav>
@@ -47,22 +47,22 @@
                 </div>
             </div>
         </header>
-        <section class="about-section">
-            <div class="container">
-                <div class="about">
-                    <div class="about__info">
-                        <h5 class="about__info-slogan">Just the right food</h5>
-                        <div class="about__info-decoration"><img src="img/Divider.png" alt="devider"></div>
-                        <p class="about__info-text">
-                            If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
-                            <div class="about__info-image"><img src="img/about-image.png" alt="cook-image" class="about__info-photo"></div>
-                        </p>
+                <section class="about-section" id="about">
+                    <div class="container">
+                        <div class="about">
+                            <div class="about__info">
+                                <h5 class="about__info-slogan">Just the right food</h5>
+                                <div class="about__info-decoration"><img src="img/Divider.png" alt="devider"></div>
+                                <p class="about__info-text">
+                                    If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!
+                                    <div class="about__info-image"><img src="img/about-image.png" alt="cook-image" class="about__info-photo"></div>
+                                </p>
+                            </div>
+                            <div class="about__dish"><img src="img/about-dish.png" alt="dish-photo" class="about__dish-image"></div>
+                        </div>
                     </div>
-                    <div class="about__dish"><img src="img/about-dish.png" alt="dish-photo" class="about__dish-image"></div>
-                </div>
-            </div>
-        </section>
-        <section class="ingredients-section">
+                </section>
+        <section class="ingredients-section" id="ingredients">
             <div class="container">
                 <div class="ingredients">
                     <div class="ingredients__slogan">Fine ingredients</div>
@@ -126,7 +126,7 @@
             </div>
         </section>
 
-        <section class="menu-section">
+        <section class="menu-section" id="menu">
             <div class="container">
                 <div class="general-menu_block">
                     <div class="menu-block_2">
@@ -259,7 +259,7 @@
             </div>
         </section>
 
-        <section class="section-reviews">
+        <section class="section-reviews" id="reviews">
             <div class="container">
                 <div class="reviews">
                     <div class="reviews__slogan">Guest Reviews</div>
@@ -274,7 +274,7 @@
             </div>
         </section>
 
-        <section class="section-form">
+        <section class="section-form" id="reservation">
             <div class="container">
                 <div class="general-form">
                     <div class="form-images">
@@ -336,7 +336,7 @@
                             <p class="footer__block-date"><b>Fri-Sun:</b> 7:00am-10:00pm</p>
                         </div>
                         <div class="footer__block-payments">
-                            <span><i class="fab fa-cc-amex payments"></i></span>
+                            <span><i class="fab fa-cc-amex payments "></i></span>
                             <span><i class="fab fa-cc-paypal payments soc-icons"></i></span>
                             <span><i class="fab fa-cc-visa payments soc-icons"></i></span>
                             <span><i class="fab fa-cc-discover payments soc-icons"></i></span>
@@ -370,6 +370,18 @@
           nav.classList.toggle("is-active");
         });
     </script>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+           $("#nav").on("click","a", function (event) {
+               event.preventDefault();
+               var id  = $(this).attr('href'),
+                   top = $(id).offset().top;
+               $('body,html').animate({scrollTop: top}, 1000);
+           });
+       });
+       </script>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
@@ -385,6 +397,5 @@
             });
         });
     </script>
-
 </body>
 </html>

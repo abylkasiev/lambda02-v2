@@ -31,7 +31,7 @@
         &.is-active
             transition: .5s
             top: 0
-            background-color: #fff
+            background-color: #000000d8
             z-index: 3
     &__list
         display: flex
@@ -45,7 +45,7 @@
             align-items: center
             font-size: 2rem
             :hover
-                color: #454545
+                color: #c1c1c1
                 text-decoration: underline
     &__item
         display: flex
@@ -77,6 +77,9 @@
         background-color: #fff
         transition: .5s
         transform: scaleX(0)
+        display: block
+        @media screen and ( max-width: 768px)
+            display: none
     &:hover::before
         transform: scaleX(1)
     @media screen and ( max-width: 1140px)
@@ -85,7 +88,6 @@
         padding: 0 .5rem
     @media screen and ( max-width: 768px)
         top: -1000px
-        color: #000
         padding-top: 1rem
         font-size: 2rem
 
@@ -103,7 +105,7 @@
         margin: 0 .5rem
         color: #dab33e
         &:hover
-            color: #454545
+            text-decoration: none
 
 .header-info__slogan
     margin-top: 139px

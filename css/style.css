@@ -29,7 +29,7 @@
 .hamburger.is-active .hamburger-inner,
 .hamburger.is-active .hamburger-inner::before,
 .hamburger.is-active .hamburger-inner::after {
-  background-color: #000;
+  background-color: #fff;
 }
 
 .hamburger-box {
@@ -597,7 +597,7 @@ html, body {
   .nav.is-active {
     transition: 0.5s;
     top: 0;
-    background-color: #fff;
+    background-color: #000000d8;
     z-index: 3;
   }
 }
@@ -616,7 +616,7 @@ html, body {
     font-size: 2rem;
   }
   .nav__list :hover {
-    color: #454545;
+    color: #c1c1c1;
     text-decoration: underline;
   }
 }
@@ -661,6 +661,12 @@ html, body {
   background-color: #fff;
   transition: 0.5s;
   transform: scaleX(0);
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .nav__link::before {
+    display: none;
+  }
 }
 .nav__link:hover::before {
   transform: scaleX(1);
@@ -678,7 +684,6 @@ html, body {
 @media screen and (max-width: 768px) {
   .nav__link {
     top: -1000px;
-    color: #000;
     padding-top: 1rem;
     font-size: 2rem;
   }
@@ -707,7 +712,7 @@ html, body {
     color: #dab33e;
   }
   .social-icons:hover {
-    color: #454545;
+    text-decoration: none;
   }
 }
 
@@ -1404,6 +1409,10 @@ html, body {
   font-family: "opensans";
   background-color: #c9a131;
   border: none;
+  cursor: pointer;
+}
+.input-btn:hover {
+  background-color: #967b03;
 }
 
 .form-date {
@@ -1541,6 +1550,7 @@ input[type=date] {
 
 .payments {
   color: #fff;
+  cursor: pointer;
 }
 
 .soc-icons {
